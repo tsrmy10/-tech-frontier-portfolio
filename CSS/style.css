@@ -1,0 +1,2260 @@
+@charset "utf-8";
+/* CSS Document */
+
+:root {
+  /* カラーパレット */
+  --color-primary: #1A2A6C;
+  --color-secondary: #8F91ED;
+  --color-accent: #F5FF6B;
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+  --color-bg-gradient: linear-gradient(-225deg, #1A2A6C 0%, #662546 32%, #8C2232 57%, #53264F 78%, #1A2A6C 100%);
+  
+  /* フォント */
+  --font-family-main: "zen maru gothic", sans-serif;
+  --font-family-accent: 'Michroma', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+}
+
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body{
+    font-family:var(--font-family-main);
+    font-weight: 300; 
+    letter-spacing: 0.12em;
+    font-style: normal;
+    margin: 0 auto;
+	  font-size: clamp(14px, 1.1vw, 18px);
+    color: var(--color-text-light);
+    background:
+    radial-gradient(rgba(255, 255, 255, 0.158) 1px, transparent 1px), /* ←ドット */ 
+    var(--color-bg-gradient);; /* ←背景のグラデーション */
+    background-size: 22px 22px, cover; /* ドットの間隔を調整 */
+}
+
+
+
+header{
+    width: 100%;
+    font-size: clamp(12px, 1.2vw, 32px);
+    z-index: 100;
+}
+
+
+
+
+.header_pc a img:hover, .header_pc  ul li:hover{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-shadow:  1px 0 10px var(--color-text-dark);
+    color:var(--color-accent);
+    transform: scale(1.25);
+    transition-duration: 0.5s;
+    
+}
+
+
+  .header_pc{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 0 5%;
+}
+
+.header_pc nav{
+  flex:1;
+}
+
+.header_pc ul{
+  display:flex;
+  justify-content:flex-end;
+  gap:2vw;
+  flex-wrap:nowrap;
+  margin-top:3%;
+}
+
+header ul li{
+  margin-left: 1%;
+}
+
+    
+   footer a img:hover, footer a:hover{
+        transform: scale(1.25);
+        transition-duration: 0.5s;
+    }
+    
+
+
+.header_img{
+    width: 20%;
+}
+
+
+
+.yoyakunav{
+  display: flex;
+  align-items: center;   /* 縦中央 */
+  justify-content: center; /* 横中央 */
+  padding: 1%;
+}
+
+
+
+.btn-cta_hed,.btn-cta_img-frame,.btn-cta,.btn-cta_nav{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  min-width: 200px;
+  font-size: clamp(14px, 1.2vw, 21px);
+  font-weight:300;
+  color: var(--color-text-light);
+  text-decoration: none;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    #6a1f3b,
+    #c41616
+  );
+
+  border-radius: 50px;
+  border: 2px solid var(--color-text-light);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+ 
+}
+
+.header_pc img{
+  width: clamp(160px, 16vw, 260px);
+  height: auto;
+}
+
+
+
+
+.header_pc ul{
+	display: flex;
+	 justify-content: center;
+   gap: clamp(10px, 1.5vw, 24px);
+}
+
+
+
+.header_sp{
+   display: none;
+}
+
+#g-nav{
+  display: none;
+}
+
+/*top*/
+.img-frame{
+    width: 50%;
+    margin: 5% auto 0;
+    position: relative;
+   
+    
+}
+
+
+ .img-top{
+    width: 100%;
+    display: block;
+ }
+
+ .img_top_sp,.img-frame_sp{
+    display: none;
+ }
+.img-serifu{
+    position: absolute;
+    width: 50%;
+    left: -10%;
+    top:-5%;
+}
+
+.img-topcont{
+  position:absolute;
+  width: 30%;
+  right: 2%;
+  top:40%;
+}
+
+.img-topcont2{
+  position: absolute;
+  width: 25%;
+  right: 3%;
+  top:2%;
+}
+
+.toptext{
+  position: absolute;
+  width: 45%;
+  top:60%;
+  left: 3%;
+}
+
+.tx0{
+    font-size:2.0vw;
+    font-weight: 700;
+    color: antiquewhite; 
+    text-shadow: 4px 4px 10px rgba(0, 0, 0,  0.747); 
+}
+
+.tx1{
+    font-size:1.3vw;
+    font-weight: 500;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0,  0.747); 
+    line-height: 1.8;
+}
+
+.tx2{
+    font-size:2.5vw;
+    font-weight: 650;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.747);
+    background-color:var(--color-secondary);
+    color: var(--color-accent);
+    display: inline-block;
+    padding: 0.2em 0.4em;
+    letter-spacing: 0.15em;
+}
+
+.tx3{
+    font-size:0.8vw;
+    font-weight: 300; 
+    margin-top:2%;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0,  0.747); 
+}
+
+.tx4{
+    font-size:0.8vw;
+    font-weight: 300; 
+    text-shadow: 4px 4px 10px rgba(0, 0, 0,  0.747); 
+}
+
+.serifu0{
+    width:100%;
+}
+
+.waku{
+  display: block;
+  margin: 5% auto;
+  width: 10%;
+}
+
+.waku2{
+  display: block;
+  margin: 5% auto;
+  width: 10%;
+  transform: scaleY(-1);
+}
+
+.banner{
+    display: block;
+    margin: 0 auto;
+    width: 55%;
+    margin-top: 5%;
+}
+
+.serifu0 h1{
+    text-align: center;
+    font-size: clamp(28px, 3.5vw, 32px);
+    font-weight: 400;
+    margin-top:5%;
+    line-height: 150%;
+}
+
+
+
+section h2 {
+  text-align: center;
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 500;
+  margin-top: 5%;
+  line-height: 150%;
+}
+
+
+
+
+
+.serifu_moya {
+  position: relative; /* hrを画像の上に重ねるための基準 */
+  width: 100%;
+  margin: 10% auto 0 auto; /* 画面中央に */
+}
+
+.serifubox0 {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hr {
+  position: absolute;
+  bottom: 70%; /* 画像の下端に配置 */
+  left: 0;
+  width: 100%;
+  border: none;
+  border-top: 0.5px solid #ffffffdd;
+  transform: translateY(-50%); /* 画像の下に少しはみ出す */
+  z-index: 1;
+}
+
+  .serifubox1 {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  margin: 5% auto 0 auto; 
+  position: relative; 
+  
+  }
+
+  .serifu00 {
+    width: 40%;
+    margin: 5% 0 0 5%;
+  }
+
+.img_box{
+    width: 100%;
+}
+
+.img_people1{
+    width: 40%;
+    display: block; 
+    margin: 0 auto ;
+    padding-left: 5%;
+}
+
+.img_people1 img {
+  width: 100%;      
+  height: auto;     
+  display: block;   
+}
+
+.points{
+    width: 100%;
+    margin-top:5%;
+}
+
+.points h2{
+    text-align: center;
+    font-size:2.5vw;
+    font-weight: 500;
+}
+
+.pointtext{
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.point1, .point2, .point3{
+  width: 20%;
+  background-color: #FFFFFFE6;
+  margin: 2.5%;
+  padding-top: 0.2%;
+  position: relative;
+}
+
+ .point1 img, .point2 img, .point3 img{
+    width: 40%;
+    display: block;
+    position: absolute;
+    right: -10%;
+    top: -22%;
+}
+
+.point3 h3, .point2 h3, .point1 h3{
+    width: 90%;
+    font-weight: 500;
+    padding: 0.8em 0.4em;
+    margin: 5% auto;
+    background-color:var(--color-primary);
+    display: block;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+}
+
+.point1 h3{
+  font-size: 2.6vw;
+}
+
+.point2 h3{
+  font-size: 2.0vw;
+}
+
+.point3 h3{
+  font-size: 2.2vw;
+}
+
+
+.point1 p, .point2 p, .point3 p{
+    width: 80%;
+    margin: 5% auto ;
+    padding-bottom: 8%;
+    font-size:1.0vw;
+    line-height: 170%;
+    color:var(--color-text-dark);
+    font-weight: 500;
+}
+
+.jyukou_box{
+    width: 100%;
+    margin-top:10%;
+}
+
+.engineer_box img, .porigo, .porigo_maney, .porigo_reserver{/* ポリゴン逆さ*/
+   width: 10%;
+    display: block;
+    margin: 0 auto;
+    margin-top:5%;
+    transform: scaleY(-1);
+}
+
+
+.jyukou_box img, .porigon, .porigo_service,.porigo_question{ /* ポリゴン*/
+    width: 10%;
+    display: block;
+    margin: 0 auto;
+    margin-top:5%;
+}
+
+.jyukou_sei{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 3%;
+}
+
+.jyukou_1, .jyukou_3 {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  background: #455182E6;
+  border-radius: 50%;
+  display: block;
+  color: var(--color-text-light);
+  outline: 5px solid var(--color-text-light);
+  outline-offset: 12px;
+  font-size: clamp(16px, 4vw, 32px);
+  text-shadow:
+    clamp(1px, 0.4vw, 3px)   /* 横方向の影 */
+    clamp(1px, 0.4vw, 3px)   /* 縦方向の影 */
+    clamp(2px, 0.8vw, 6px)   /* ぼかし */
+    rgba(0, 0, 0, 0.35);
+}
+
+
+.jyukou_2 {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  background: #FFE0E0E6;
+  border-radius: 50%;
+  display: block;
+  color: var(--color-text-dark);
+  outline: 5px solid var(--color-text-light);
+  outline-offset: 12px;
+  font-size: clamp(16px, 4vw, 32px);
+  text-shadow:
+    clamp(1px, 0.4vw, 3px)   
+    clamp(1px, 0.4vw, 3px)   
+    clamp(2px, 0.8vw, 6px)   
+    rgba(0, 0, 0, 0.35);
+  margin-top: 10%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+
+
+.jyukou_1 h3, .jyukou_2 h3, .jyukou_3 h3{
+    text-align: center;
+    padding-top: 10%;
+    font-weight: 550;
+    line-height: 160%;
+    font-size: 1.1vw;
+}
+
+.jyukou_1 p, .jyukou_2 p, .jyukou_3 p{
+    text-align: center;
+    padding: 5% 10% 0 10%;
+    font-size: 1.1vw;
+    line-height: 180%;
+}
+
+.jyukou_1 img, .jyukou_2 img, .jyukou_3 img{
+    width: 25%;
+    display: block;
+    margin: 0 auto;
+    margin-top:5%;
+}
+
+.jyukou_1 span, .jyukou_2 span, .jyukou_3 span{
+    background: linear-gradient(transparent 60%, #82EED5E6 50%);
+}
+
+.jyukou_banner,.service_riyo_banner {
+  display: block;
+  width: 70%;
+  max-width: 400px; 
+  margin: 0 auto; 
+  margin-top: 5%;
+
+}
+
+
+
+.engineer_box{
+    width: 100%;
+    margin-top:10%;
+}
+
+.serifu0 p, .engineer_box p,.service_box p, .service_riyo_box p , .suport_box p, #maneny p,#reserver p{
+    text-align: center;
+    font-size: clamp(14px, 1.5vw, 24px);
+    font-weight: 300;
+    line-height: 170%;
+    margin-top: 5%;
+}
+
+.engineer_box span{
+    font-size: 1.3vw;
+    margin-top: 2%;
+}
+
+
+
+.company_logs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.company_1, .company_2, .company_3, .company_4, .company_5, .company_6{
+    width: 28%;
+    background-color: var(--color-secondary);
+    margin: 1.5%;
+    display: block;
+    padding-top: 1.2%;
+    padding-bottom: 1.2%;
+}
+
+.co1, .co2, .co3, .co4, .co5, .co6{
+    width: 90%;
+    height: 95%;
+    border: 2px solid var(--color-text-light);
+    display: block;
+    margin: 0 auto;
+    padding: 8% 0;
+}
+
+.company_1 h3, .company_2 h3, .company_3 h3, .company_4 h3, .company_5 h3, .company_6 h3{
+    width: 90%;
+    font-weight: 500;
+    padding: 0.8em 0.8em;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 1.7vw;
+    line-height: 170%;
+    
+}
+
+.company_1 h3,.company_3 h3, .company_4 h3, .company_6 h3{
+  padding-top: 1.5em;
+}
+
+.service_box{
+    width: 100%;
+    margin-top:10%;
+}
+
+.skills{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+  
+}
+
+.service_line{
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+    margin-top: -5%;
+}
+
+.service_box h3{
+    text-align: center;
+    font-size: clamp(24px, 2.5vw, 28px);
+    font-weight: 500;
+    margin-top:-3%;
+}
+
+.skill1_apuri, .skill2_genba, .skill3_database, .skill4_vertion, .skill5_ronri, .skill6_portforio{
+    width: 25%;
+    aspect-ratio: 3 / 4;
+    background-image:url("../img/背景スキル.svg");
+    background-size: contain;   /* ← すべて収める */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 2;
+    margin-right: 2%;
+    margin-top: -5%;
+}
+
+.skill1_apuri img, .skill2_genba img, .skill3_database img, .skill4_vertion img, .skill5_ronri img, .skill6_portforio img{
+    width: 15%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 35%;
+}
+.skill1_apuri h4, .skill2_genba h4, .skill3_database h4, .skill4_vertion h4, .skill5_ronri h4, .skill6_portforio h4{
+    text-align: center;
+    font-size:1.6vw;
+    font-weight: 500;
+    margin-top:3%;
+    color: var(--color-text-dark);
+  
+}
+
+.skill1_apuri p, .skill2_genba p, .skill3_database p, .skill4_vertion p, .skill5_ronri p, .skill6_portforio p{
+    font-size:1.2vw;
+    font-weight: 400;
+    margin-top:4%;
+    line-height: 170%;
+    padding: 1.8em 1em;
+    text-align: left;
+}
+
+.suport_box{
+    width: 100%;
+    margin-top:5%;
+}
+
+.suport_contents{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 5%;
+    position: relative;
+    margin-left: -4%;
+}
+
+.suport_contents2{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    position: relative;
+    margin-right: -4%;
+}
+.suport_contents img, .suport_contents2 img{
+    width: 55%;
+    position:relative
+    
+}
+
+.sp_img, .sp_img2{
+    display: none;
+}
+
+.suport1{
+    width: 49%;
+    margin-left: 5%;
+    position: absolute;
+    left: 65%;
+    top:1%;
+    background-color: #FFFFFFC7;
+    font-size: 1.5vw;
+}
+
+ .suport2{
+    width: 49%;
+    margin-left: 5%;
+    position: absolute;
+    right: 65%;
+    top:6%;
+    background-color: #FFFFFFC7;
+    font-size: 1.5vw;
+ }
+.suport1 h3, .suport2 h3{
+    text-align: center;
+    font-size:2.0vw;
+    font-weight: 500;
+    margin-top:5%;
+    color: var(--color-primary);
+
+}
+
+
+.suport1 p, .suport2 p{
+    font-size:1.2vw;
+    font-weight: 600;
+    margin: 5% 5% 10% 5%;
+    line-height: 170%;
+    color: var(--color-text-dark);
+    text-align: left;
+}
+
+.service_riyo_box{
+    width: 100%;
+    margin-top:10%;
+}
+
+
+
+.service_steps{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5% 
+
+}
+
+.step1, .step2, .step3{
+  width: 25%;
+  position: relative ;
+  margin: 0 2% 0%  2%;
+ 
+}
+
+.step1 img, .step2 img, .step3 img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.cta_wrap{
+   display: flex;
+   justify-content: center;
+   margin-top: 7%;
+}
+ .btn-cta {
+  min-width: 400px;
+  padding: 25px 86px;
+
+}
+
+
+
+
+  .btn-cta:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  }
+
+
+
+
+.hako h3, .hako2 h3, .hako3 h3{  
+    position: absolute;
+    font-size: 1.7vw;
+    font-weight: 700;
+    color: var(--color-primary);
+    top: 10%;   /* ←ここを変えるだけで全体統一可能 */
+    left: 10%;
+    margin: 0;
+    
+}
+
+.hako h3{
+   top:7%;
+    left: 19%;
+}
+
+
+.hako2 h3{
+   top:7%;
+    left: 23%;
+}
+
+.hako3 h3{
+   top:7%;
+    left: 36%;
+}
+
+.hako p, .hako2 p, .hako3 p{
+    position: absolute;
+    font-size: 1.1vw;
+    font-weight: 400;
+    color: var(--color-text-light);
+    top: 58%;  /* ←ここも統一 */
+    left: 10%;
+    width: 80%;
+    text-align: left;
+    margin: 0;
+    line-height: 1.6;
+   
+}
+
+#maneny{
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.why_kakaku p{
+   /* font-size: clamp(8px, 2.5vw, 12px);*/
+    /*width: 90%;*/
+    padding-bottom: 4%;
+    font-size: 1.5vw;
+  }
+
+
+.kingaku{
+    width: 100%;
+    margin-top:10%;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.kingaku img{
+    width: 35%;
+    display: block;
+    margin: 0 2% 0 2%;
+}
+#yaji{
+    margin: 0 1% 0 1%;
+    width: 3%;
+    display: block;
+}
+#sp_only_yaji{
+    display: none;
+}
+
+.tsujo{
+    width: 20%;
+    display: block;  
+}
+
+#yaji_shita{
+    margin: 0 auto;
+    width: 8%;
+    display: block;
+    margin-top: 5%;
+}
+
+.haikeiao{
+    margin-top: 5%;
+    width: 40%;
+    position: relative;
+    margin: 5% auto 0;
+}
+
+.haikeiao img{
+    width: 100%;
+    display: block;
+}
+
+
+
+.why_kakaku {
+  position: absolute;
+  top: 50%;               
+  left: 50%;             
+  transform: translate(-50%, -50%);  /* 中央に調整 */
+  text-align: center;
+  color: var(--color-text-light);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  width: 80%;            /* テキスト幅（任意） */
+
+}
+
+
+.question{
+    width: 100%;
+    margin-top:10%;
+}
+
+.question_box{
+  max-width: 700px;
+  margin: 20px auto;
+  margin-top: 5%;
+}
+
+.qa-section .q1 {
+  position: relative;
+  width: 100%;
+  margin: 0 0 1em 0;
+  color: var(--color-text-light);
+  border: var(--color-text-light) 2px solid;
+  margin-top: 10%;
+}
+
+.qa-section .q1 input{
+  display: none;
+}
+/* 質問 */
+.qa-section .q1 label {
+  font-weight: 400;
+  line-height: 1.6em;
+  position: relative;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 1em 2em 1em 2.5em;
+  cursor: pointer;
+  text-indent: 1em;
+  border-radius: 0.5em;
+  /*background: rgba(27,37,56,0.1);*/
+}
+
+.qa-section .q1 .q-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+
+
+.qa-section .q1 label:hover {
+  color: #e99dfc;
+  transition: all 0.3s;
+}
+/* --質問の＋アイコン */
+.qa-section .q1 label::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '+';
+  font-size: 1.7em;
+  font-weight: 400;
+  line-height: 2em;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  transition: transform 0.3s;
+}
+/* 答え */
+.qa-section .q1 .a1{
+  position: relative;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 0 0 2.5em;
+  border-radius: 0 0 0.5em 0.5em;
+  transition: max-height 0.2s;
+}
+.qa-section .q1 .a1::before {
+  position: absolute;
+  content: 'A';
+  font-family: serif;
+  font-size: 1.5em;
+  margin: 0.4em 0 0 -1em;
+  padding: 0;
+}
+.qa-section .q1 .a1 p {
+  margin: 1em 1em 1em 0;
+}
+/* 質問を開いた時の仕様 */
+/* --答えの高さ */
+.qa-section .q1 input:checked ~ .a1 {
+  max-height: 60em;
+  border: 10px solid rgba(209, 209, 209, 0.1);
+}
+/* 質問をクリックした時のアイコンの動き */
+.qa-section .q1 input:checked ~ label {
+  color: #edf397;
+  border-radius: 0.5em 0.5em 0 0;
+}
+/* 質問をクリックした時の+の動き */
+.qa-section .q1 input[type=checkbox]:checked + label::after {
+  transform: rotateZ(45deg);
+  transform-origin: 50% 50%;
+}
+
+
+
+/* --- 共通スタイル（PC・タブレット・スマホ） --- */
+
+/* -------------------------
+   基本スタイル（PC基準）
+------------------------- */
+#reserver {
+  max-width: 100%;
+  margin: 8% auto;
+  padding: 0 5%;
+  text-align: center;
+}
+
+#reserver .btn-cta{
+  width: 100%;
+  max-width: 400px;
+  min-width: unset;
+  margin: 20px auto 0;
+  display: flex;          /* ← blockじゃなくこれ */
+  align-items: center;    /* 縦中央 */
+  justify-content: center;/* 横中央 */
+}
+
+#reserver p {
+  margin-top: 4%;
+  margin-bottom: 8%;
+  line-height: 1.7;
+ 
+}
+
+#reserver form {
+  width: 40%;
+  background: #ffffff6e;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* 中央寄せ */
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  width: 80%;           /* input と同じ幅にする */
+  text-align: left;  
+  
+}
+
+.required {
+  color: #ff1e01a1;
+  font-size: 0.85rem;
+  background: #ffffffe6;
+  padding: 1px 6px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"] {
+  width: 80%;   /* ← ここを変更 */
+  margin: 0 auto; 
+  display: block;
+  padding: 20px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  
+}
+
+.form-group input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+ 
+}
+
+.form-group.checkbox label {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0; /* 下の余白も不要なので削除 */
+ 
+}
+
+
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* ← これで真ん中に！ */
+  text-align: center;
+}
+
+
+.form-group.checkbox input {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+.form-group.checkbox input[type="checkbox"] {
+  appearance: auto; /* 念のため */
+  accent-color: var(--color-primary);  /* チェック時の色 */
+  width: 18px;
+  height: 18px;
+  border: 2px solid #333; /* ← これで見える！ */
+  background: var(--color-text-light);
+}
+
+
+#reserver button {
+  width: 100%;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.25s, transform 0.15s;
+}
+ #reserver button img {
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+ }
+
+#reserver button:hover {
+  opacity: 0.7;
+  transform: translateY(-1px);
+}
+
+#reserver button:active {
+  transform: translateY(1px);
+}
+
+#reserver form p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-top: 10%;
+}
+
+.form-group input::placeholder {
+  color: var(--color-text-light);   /* ← 好きな色に変更OK（例：黒 #000、白 #fff など） */
+}
+
+/* フォームエラー */
+.error-message {
+  display: none;
+  color: #ff4444;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+.form-group input.error,
+.form-group input[aria-invalid="true"] {
+  border-color: #ff4444;
+  background-color: #fff5f5;
+}
+
+.form-group input:focus.error {
+  box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.2);
+}
+
+/* フォーカス管理 */
+*:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* キーボードナビゲーション用 */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-accent);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* ===== 六角形 トップへ戻る ===== */
+#backToTop {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 90px;
+  height: 80px;
+
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-text-light);
+  border: none;
+  cursor: pointer;
+
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTop:hover {
+  transform: translateY(-6px) scale(1.05);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+  color:var(--color-primary);
+}
+
+#backToTop .arrow {
+  width: 16px;
+  height: 16px;
+  border-left: 3px solid currentColor;
+  border-top: 3px solid currentColor;
+  transform: rotate(45deg);
+  margin-bottom: 6px;
+}
+
+
+/* テキスト */
+#backToTop .text {
+  font-size: 10px;
+  line-height: 1.3;
+  margin-top: 4px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+
+
+/* ===== スクロールフェードイン ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+/* 順番用ディレイ */
+.fade-delay-1 { transition-delay: 0.1s; }
+.fade-delay-2 { transition-delay: 0.25s; }
+.fade-delay-3 { transition-delay: 0.4s; }
+.fade-delay-4 { transition-delay: 0.55s; }
+.fade-delay-5 { transition-delay: 0.7s; }
+.fade-delay-6 { transition-delay: 0.85s; }
+
+
+
+
+
+/* -------------------------------------------------
+    ▼▼ スマホ（〜480px） ▼▼
+   ------------------------------------------------- */
+@media (max-width: 480px) {
+ 
+  .sp370-only {
+    display: none;
+ }
+
+
+ .btn-cta {
+    display: inline-block; 
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+    margin: 0 auto;      
+    display: flex;
+ }
+
+
+  #reserver {
+    margin: 12% auto;
+    padding: 0 4%;
+  }
+
+  #reserver h2,.maneny h2,.question h2,.service_riyo_box h2,.suport_box h2,.engineer_box h2,.service_box h2,.points h2,.serifu0 h1,.jyukou_box h2{
+    margin-top: 20%;
+  }
+
+  .porigo_reserver {
+    width: 130px;
+  }
+
+
+
+  .serifu_suport{
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #reserver form {
+    width: 90%;       /* ← スマホは画面の90%で見やすく */
+    padding: 20px 15px;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  #reserver button {
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+
+.question_box {
+    max-width: 90%;
+    margin: 20px auto;
+  }
+
+  .qa-section .q1 label {
+    padding: 1em 1em 1em 2.2em;
+    font-size: 0.9rem;
+    line-height: 1.5em;
+  }
+
+  .qa-section .q1 .q-icon {
+    width: 22px;
+    height: 22px;
+    left: 8px;
+  }
+
+  .qa-section .q1 label::after {
+    font-size: 1.3em;
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .qa-section .q1 .a1 p {
+    font-size: 0.9rem;
+    line-height: 1.6em;
+  }
+
+  .kingaku {
+    flex-direction: column;
+    margin-top: 10%;
+  }
+
+  .kingaku img {
+    width: 70%;
+    margin: 3% auto;
+  }
+
+  .tsujo {
+    width: 40%;
+  }
+
+  #yaji {
+    display: none;
+  }
+
+  .sp_only_yaji{
+    display: block;
+    width: 15%;
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+
+  #yaji_shita {
+    width: 18%;
+    margin-top: 8%;
+  }
+
+  /* 青ひし形 + テキスト */
+  .haikeiao {
+    width: 80%;
+  }
+
+.why_kakaku p {
+  font-size: clamp(8px, 3.8vw, 14px);
+  line-height: 1.1;
+}
+
+
+  #maneny p {
+    /*font-size: 3.2vw;*/
+    line-height: 1.7em;
+    padding: 0 5%;
+    
+  }
+
+  .service_steps {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+  }
+
+  .step1, .step2, .step3 {
+    width: 75%;
+    margin: 6% auto;
+  }
+
+  .service_riyo_box p {
+    font-size: 3.8vw;
+    padding: 0 5%;
+  }
+
+  /* タイトル */
+
+  .hako h3{
+    font-size: 5vw;
+    top: 7%;
+    left: 19%;
+  }
+  .hako2 h3 {
+    font-size: 5vw;
+    top: 7%;
+    left: 23%;
+  }
+
+   .hako3 h3 {
+    font-size: 5vw;
+    top: 7%;
+    left: 35%;
+   }
+
+  /* 説明文 */
+  .hako p, .hako2 p, .hako3 p {
+    font-size: 3.5vw;
+    top: 58%;
+    left: 8%;
+    width: 84%;
+    line-height: 1.6em;
+  }
+
+  /* バナー */
+  .service_riyo_banner,.jyukou_banner {
+    width: 80%;
+    margin:5% auto 0;
+    display: block;
+  }
+
+  
+
+.suport_contents,
+  .suport_contents2 {
+   display: block;
+    width: 100%;
+    margin: 8% auto;
+    padding: 0;
+  }
+
+
+  .pc_img {
+    display: none;
+  }
+ .suport_contents .sp_img,.suport_contents2 .sp_img{
+    display: block;
+    width: 90%;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .suport1,
+  .suport2 {
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+    background: #FFFFFFC7;
+    margin-top: -5%;
+  }
+
+  .suport1 h3,
+  .suport2 h3 {
+    font-size: 5vw;
+    text-align: center;
+    padding-top: 2%;
+  }
+
+  .suport1 p,
+  .suport2 p {
+    font-size: 3.5vw;
+    margin: 3% 5% 0;
+    line-height: 1.7;
+    padding-bottom: 3.5%;
+  }
+
+
+  .service_box {
+    margin-top: 20%;
+  }
+
+  .service_line {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .service_box h4 {
+    font-size: 1.2rem;
+    margin-top: 5%;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+  }
+
+  .skill1_apuri,
+  .skill2_genba,
+  .skill3_database,
+  .skill4_vertion,
+  .skill5_ronri,
+  .skill6_portforio {
+    width: 80%;
+    aspect-ratio: 3 / 4;
+    margin: -12% 0 -20% 0;
+  }
+
+  
+  .skill3_database img,
+  .skill5_ronri img {
+    width: 18%;
+    padding-top: 32%;
+  }
+
+  .skill2_genba img,.skill4_vertion img,.skill6_portforio img{
+    width: 22%;
+    padding-top: 33%;
+  }
+
+  .skill1_apuri h4,
+  .skill2_genba h4,
+  .skill3_database h4,
+  .skill4_vertion h4,
+  .skill5_ronri h4,
+  .skill6_portforio h4 {
+    font-size: 1.1rem;
+    margin-top: 4%;
+  }
+
+  .skill1_apuri p,
+  .skill2_genba p,
+  .skill3_database p,
+  .skill4_vertion p,
+  .skill5_ronri p,
+  .skill6_portforio p {
+    font-size: 0.90rem;
+    padding: 1.2em 1.5em;
+    line-height: 1.7;
+  }
+
+  .engineer_box {
+    margin-top: 20%;
+  }
+
+  .engineer_box p {
+    font-size: 0.95rem;
+    margin-top: 8%;
+    line-height: 1.7;
+  }
+
+  .engineer_box span {
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 4%;
+  }
+
+  .company_logs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10%;
+    padding: 0;
+  }
+
+  .company_1,
+  .company_2,
+  .company_3,
+  .company_4,
+  .company_5,
+  .company_6 {
+    width: 48%;        /* ← 2列のポイント */
+    margin: 0 0% 5% 0;  /* 下余白のみ */
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .co1,
+  .co2,
+  .co3,
+  .co4,
+  .co5,
+  .co6 {
+    width: 90%;
+    padding: 12% 0;
+  }
+
+  .company_1 h3,
+  .company_2 h3,
+  .company_3 h3,
+  .company_4 h3,
+  .company_5 h3{
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    padding: 0.6em;
+    line-height: 1.6;
+  }
+
+  .company_6 h3 {
+    font-size: 0.8rem;
+    padding: 0.8em;
+    line-height: 1.6;
+  }
+
+  .company_1 h3,
+  .company_3 h3,
+  .company_4 h3,
+  .company_6 h3 {
+    padding-top: 1em;
+  }
+
+  .engineer_pm {
+    font-size: 1rem;
+    margin-top: 8%;
+  }
+
+
+  /* 受講生 全体を縦並び */
+  .jyukou_sei {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* 丸カード共通 */
+  .jyukou_1,
+  .jyukou_2,
+  .jyukou_3 {
+    width: 75%;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+    outline-offset: 8px;
+    font-size: 16px; 
+    margin-top: 10%;
+  }
+
+  
+
+  /* 見出し */
+  .jyukou_1 h3,
+  .jyukou_2 h3,
+  .jyukou_3 h3 {
+    font-size: 16px;
+    padding-top: 18%;
+    line-height: 150%;
+  }
+
+  /* 本文 */
+  .jyukou_1 p,
+  .jyukou_2 p,
+  .jyukou_3 p {
+    font-size: 14px;
+    line-height: 170%;
+    padding: 6% 10% 0;
+  }
+
+  /* アイコン画像 */
+  .jyukou_1 img,
+  .jyukou_2 img,
+  .jyukou_3 img {
+    width: 22%;
+    margin-top: 6%;
+  }
+
+
+
+  /* ===== もやもや＋バナー ===== */
+  .serifu_moya {
+    margin-top: 20%;
+  }
+
+  .serifubox0 {
+    width: 80%;
+  }
+
+  .hr {
+    bottom: 80%;
+  }
+
+  /* もやもや画像：縦並び */
+  .serifubox1 {
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .serifu00 {
+    width: 80%;
+    margin: 0;
+  }
+
+  /* 人物画像 */
+  .img_people1 {
+    width: 70%;
+    padding-left: 0;
+    margin-top: 10%;
+  }
+
+  /* ===== POINTS ===== */
+  .points {
+    margin-top: 20%;
+  }
+
+  .points h2 {
+    font-size: 22px; /* vwやめる */
+  }
+
+  /* ポイントを縦並び */
+  .pointtext {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    gap: 40px;
+  }
+
+  .point1,
+  .point2,
+  .point3 {
+    width: 75%;
+    margin: 0;
+    padding-top: 8%;
+  }
+
+  /* ポイント画像 */
+  .point1 img,
+  .point2 img,
+  .point3 img {
+    width: 30%;
+    right: -8%;
+    top: -15%;
+  }
+
+  /* 見出し */
+  .point1 h3,
+  .point2 h3,
+  .point3 h3 {
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    padding-bottom: 8%;
+    margin-top: -3%;
+    padding-top: 8%;
+ 
+  }
+
+ 
+  /* 本文 */
+  .point1 p,
+  .point2 p{
+    font-size: 14px;
+    line-height: 170%;
+    padding-bottom: 12%;
+  }
+
+ .point3 p {
+    font-size: 14px;
+    line-height: 170%;
+    padding-bottom: 15%;
+  }
+ 
+
+  /* ポイントを縦並び */
+  .pointtext {
+    display: flex;          /* ← これが必要 */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    gap: 40px;
+  }
+
+    .serifu0 {
+    width: 100%;
+    padding: 0 5%; /* 画面端にくっつかないように */
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* 枠画像 */
+  .waku,
+  .waku2,.engineer_box img, 
+  .porigo, 
+  .porigo_maney, 
+  .porigo_reserver,
+  .jyukou_box img, 
+  .porigon, 
+  .porigo_service,
+  .porigo_question {
+    width: 25%;     /* スマホでは少し大きく */
+    margin: 8% auto;
+  }
+
+  /* バナー */
+  .banner {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    margin: 15% auto;
+    display: block;
+  }
+
+.img-frame{
+    display: none;
+}
+
+.cta_img-frame{
+   display: inline-block; 
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+    margin: 0 auto;      
+    display: flex;
+}
+.img-frame_sp{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.img_top_sp{
+    display: block;
+    width: 100%;
+}
+.img-serifu_sp{
+    position: absolute;
+    top:5%;
+    display: block;
+    width: 80%;
+}
+
+.cta_img-frame{
+  margin-top: 14%;
+ }
+
+.img-topcont_sp{
+    position: absolute;
+    top:42%;
+    right: 5%;
+    display: block;
+    width: 40%;
+}
+
+ .toptext{
+    width: 90%;
+    top: 57%;
+    left: 3%;
+  }
+
+  .tx0{
+    font-size: 1.4rem;
+  }
+
+  .tx1{
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .tx2{
+    font-size: 1.8rem;
+    padding: 0.3em 0.6em;
+    letter-spacing: 0.1em;
+    margin-top: 0.3em;
+  }
+
+  .tx3,
+  .tx4{
+    font-size: 0.75rem;
+    margin-top: 0.2em;
+  }
+
+  .img-topcont2_sp{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+
+.header_pc{
+    display: none;
+}
+
+.header_sp{
+    display: block;
+    
+}
+
+
+#hamburger {
+  margin-left: auto;  /* ロゴとハンバーガーの間に自動スペースを入れる */
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1200;
+}
+
+#hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-text-light);
+  transition: 0.4s;
+}
+
+#hamburger span:nth-child(1) { top: 0; }
+#hamburger span:nth-child(2) { top: 9px; }
+#hamburger span:nth-child(3) { bottom: 0; }
+
+
+/* 線の位置 */
+#hamburger span:nth-child(1) {
+  top: 0;
+}
+#hamburger span:nth-child(2) {
+  top: 9px;
+}
+#hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+/* ===== ×に変形 ===== */
+#hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+#hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+.header_sp {
+  display: flex;
+  align-items: center;   /* 縦中央揃え */
+  padding: 15px 16px;
+}
+
+.header_logo_sp {
+  height: 32px;
+  width: auto;
+}
+
+  #g-nav {
+    display: block;   
+  }
+
+/* ナビ本体（下から） */
+#g-nav {
+  position: fixed;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(9, 8, 73, 0.993);
+  transition: 0.4s ease;
+  z-index: 1100;
+}
+
+#g-nav.active {
+  bottom: 0;
+}
+
+/* ×ボタン */
+#close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* ナビリスト */
+.nav-list {
+  list-style: none;
+  padding: 80px 20px;
+}
+
+.nav-list li {
+  margin-bottom: 40px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-size: 18px;
+}
+
+#backToTop {
+    width: 75px;
+    height: 68px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+#backToTop .arrow {
+    font-size: 18px;
+  }
+
+#backToTop .text {
+    font-size: 9px;
+  }
+
+}
+
+
+
+
+
+/* -------------------------------------------------
+    ▼▼ タブレット（481〜768px） ▼▼
+   ------------------------------------------------- */
+@media (min-width: 481px) and (max-width: 769px) {
+ 
+  #reserver h2,.maneny h2,.question h2,.service_riyo_box h2 {
+    font-size: 1.6rem;
+    margin-top: 20%;
+  }
+
+  #reserver {
+    margin: 10% auto;
+  }
+
+  #reserver form {
+    width: 75%;  /* タブレットは広め */
+  }
+
+  #reserver h2,.question h2 {
+    font-size: 1.8rem;
+  }
+
+  .question_box {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+
+  .qa-section .q1 label{
+    font-size: 0.8rem;
+    padding: 1em 2em 1em 2.3em;
+  }
+
+  .a1 p {
+    font-size: 1rem;
+    line-height: 1.7em;
+  }
+
+  .qa-section .q1 .q-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .qa-section .q1 .a1::before {
+  position: absolute;
+  content: 'A';
+  font-family: serif;
+  font-size: 1.0rem;
+  padding: 0;
+}
+
+.kingaku img {
+    width: 40%;
+  }
+
+  .tsujo {
+    width: 28%;
+  }
+
+  #yaji {
+    width: 6%;
+  }
+
+  .haikeiao {
+    width: 60%;
+  }
+
+
+     .why_kakaku p{
+   /* font-size: clamp(12px, 1.5vw, 14px);*/
+    padding-bottom: 4%;
+    font-size: 1.2vw;
+  }
+
+  #sp_only_yaji{
+    display: none;
+  }
+
+  .service_steps {
+    justify-content: space-around;
+  }
+
+  .step1, .step2, .step3 {
+    width: 45%;
+    margin: 5% 2%;
+  }
+
+ .hako h3{
+    font-size: 2vw;
+    top: 7%;
+    left: 19%;
+  }
+  .hako2 h3 {
+    font-size: 2vw;
+    top: 7%;
+    left: 23%;
+  }
+
+   .hako3 h3 {
+    font-size: 2vw;
+    top: 7%;
+    left: 35%;
+   }
+
+  .hako p, .hako2 p, .hako3 p {
+    font-size: 1.2vw;
+    top: 60%;
+  }
+
+  #nagare p {
+    font-size: 1rem;
+  }
+
+ 
+
+
+}
+
+  
+
+
+
+
+
+
+/* -------------------------------------------------
+    ▼▼ PC（769px〜） ▼▼
+   ------------------------------------------------- */
+@media (min-width: 770px) {
+  #reserver form {
+    width: 50%; /* PCは50%にしてより洗練 */
+  }
+
+ 
+  .question_box {
+    max-width: 700px;
+
+  }
+}
+
+.footer-inner{
+    width: 100%;
+    margin-top:10%;
+}
+
+.footer-logo a img{
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-nav{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.footer-nav ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* ← これが最重要 */
+    justify-content: center;
+    gap: 10px 15px; /* 項目の間隔 */
+    padding: 0;
+    margin: 5% auto 0 auto;
+    list-style: none;
+}
+
+.footer-nav ul li {
+    white-space: nowrap; /* 長い文字が途中で折れないように */
+}
+
+.footer-nav ul a{
+    color:var(--color-text-light);
+    text-decoration: none;
+    padding: 4px 6px;
+    font-size: 0.9rem;
+}
+
+.footer-info{
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+    padding-bottom: 5%;
+   
+}
+.footer-info p{
+    margin-top: 5%;
+    font-size:sclamp(18px, 2.4vw, 24px);
+    color:var(--color-text-light);
+}
+.footer-nav ul a:hover,.footer-info a:hover{
+    color:var(--color-accent);
+    text-shadow: var(--color-text-dark) 1px 0 10px;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+
+
+.footer-bottom{
+    width: 100%;
+    margin-top:5%;
+    text-align: center;
+    font-size: 0.9rem;
+    color:var(--color-accent);
+    padding-bottom: 3%;
+    font-family: 'Michroma', sans-serif;
+}
